@@ -17,3 +17,5 @@ A commit creates a save point in the history of your file. A good commit message
 * What is a merge conflict?
 
 A merge conflict happens when 2 different users try to edit the same file or line of code. If one user deleted a file and the other modified it, you would get a merge conflict, because Git will not know what is correct.
+
+Hi Tyler!!!
