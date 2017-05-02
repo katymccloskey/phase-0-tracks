@@ -18,7 +18,6 @@ section#contact-info p {
   padding-right: 20px;
   padding-left: 20px;
   border-right: 2px solid black;
-  font-size: .8em;
 }
 
 /* We use the last-of-type selector

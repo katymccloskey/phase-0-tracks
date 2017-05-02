@@ -1,3 +1,12 @@
-section#contact-size p {
+section#contact-info p {
+  display: inline;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-right: 2px solid black;
   font-size: .8em;
+}
+
+section.job {
+  background-color: #e9e5dc;
+  border-radius: 5%;
 }
