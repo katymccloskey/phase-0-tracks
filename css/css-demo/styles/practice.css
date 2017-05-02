@@ -9,4 +9,10 @@ section#contact-info p {
 section.job {
   background-color: #e9e5dc;
   border-radius: 5%;
+  margin-top: 5%;
+  padding: 5px;
+}
+
+ul.font-size {
+  font-size: .8em;
 }
