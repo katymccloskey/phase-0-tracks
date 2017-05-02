@@ -1,0 +1,30 @@
+section#contact-info p {
+  display: inline;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-right: 2px solid black;
+  font-size: .8em;
+}
+
+section.job {
+  background-color: #e9e5dc;
+  border-radius: 5%;
+  margin-top: 5%;
+  padding: 5px;
+}
+
+ul.font-size {
+  font-size: .8em;
+}
+
+ul#font-size {
+  font-size: 20em;
+}
+
+li:last-child {
+  color: red;
+}
+
+section.job:last-of-type {
+  color: green;
+}
