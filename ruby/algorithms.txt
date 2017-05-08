@@ -1,0 +1,14 @@
+Robot Elevator
+
+-For each item in a list of items:
+  -Until you hear yes
+    -Ask user if they want
+      -car
+      -snack
+      -book
+-When you hear yes, proceed to the following level:
+  -car: level 1
+  -snack: level 2
+  -book: level 3
+
+
