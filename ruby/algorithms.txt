@@ -12,3 +12,22 @@ Robot Elevator
   -book: level 3
 
 
+Making Coffee
+
+-Take coffee grinder out of cupboard
+  -Set on counter
+  -Take off lid
+-Open coffee canister
+  -Put 2 scoops in grinder
+  -Turn on grinder for 10 seconds
+-Pour coffee grounds into french press
+-Fill pot with water from sink
+  -Place pot on stove
+  -Turn burner on high
+  -Until water is boiling
+-Pour boiling water into french press
+-Put lid on
+-Wait 4 minutes
+-Press lid down
+-Pour coffee into mug
+-Drink!
