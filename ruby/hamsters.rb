@@ -7,15 +7,11 @@ name = gets.chomp
 # ask user hamster's volume level on scale of 1-10
   #volume= gets.chomp
   #volume= true if <=10, false if >10
+puts "On a scale of 1-10, how loud is your hamster?"
+volume_level = gets.chomp
+volume_level.to_i
+puts #{volume_level}
 
-while volume != true
-  puts "On a scale of 1-10, how loud is your hamster?"
-  volume = gets.chomp
-
-      if volume <= 10
-        volume = true
-      else volume = false
-end
 
 # ask user hamster's fur color
   # fur_color= gets.chomp
@@ -30,25 +26,22 @@ fur_color = gets.chomp
     # good_candidate= true
   # else puts "I didn't understand"
 #end
-while good_candidate != true
-  puts "Is your hamster a good candidate for adoption? y/n"
-    candidate_status = gets.chomp
-  if candidate_status = y
-    good_candidate = true
-  else candidate_status = n
-    good_candidate = true
-end
+puts "Is your hamster a good candidate for adoption? y/n"
+candidate_status = gets.chomp
 
 #ask user hamster's estimated age
   # age=gets.chomp
   # if age is blank, age=nil
 puts "What is your hamster's estimated age?"
 age = gets.chomp
-  if age.empty
+  if age.empty?
       age = nil
+  else age = age.to_i
   end
 
-end
+puts "Hamster's name: #{name}. Hamster's volume: #{volume_level}. Hamster's fur color: #{fur_color}. Adoption candidate: #{candidate_status}.
+  Hamster's age: #{age}."
 
-puts "Thanks!"
+
+
 
