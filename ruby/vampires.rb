@@ -55,3 +55,5 @@ elsif likes_garlic_bread != true || wants_insurance != true
 elsif likes_garlic_bread != true && wants_insurance != true
   puts "Almost certainly a vampire"
 end
+
+# check other repl
