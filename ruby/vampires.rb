@@ -3,6 +3,13 @@ likes_garlic_bread = true
 wants_insurance = true
 current_year = 2017
 
+puts "How many employees do you need to process?"
+num_of_emp = gets.chomp
+num_of_emp = num_of_emp.to_i
+
+until num_of_emp == 0
+  num_of_emp = num_of_emp - 1
+
 puts "What is your name?"
 name = gets.chomp
   puts "Nice to meet you, #{name}!"
@@ -58,4 +65,7 @@ elsif name = true
   puts "Definitely a vampire"
 
 else puts "Results inconclusive"
+end
+
+  puts "#{num_of_emp} potential vampires left!"
 end
