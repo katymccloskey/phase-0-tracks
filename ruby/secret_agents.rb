@@ -25,6 +25,7 @@ end
 # while index is less than str length, continue evaluating
 # create str of alphabet to reference back to
 # index the str to refer to the alphabet index
+# add one the index each time to continue evaluating
 
 def decrypt(str)
   index = 0
@@ -39,6 +40,11 @@ end
 # decrypt("bcd")
 # decrypt(encrypt("swordfish"))
 
+# ask user if they want to encrypt or decrypt
+# until loop to get them to choose
+# ask them what their password is
+# call method decrypt or encrypt
+
 puts "Would you like to encrypt or decrypt a password?"
   choice = gets.chomp
   until choice == "encrypt" || choice == "decrypt"
@@ -52,5 +58,5 @@ puts "What is your password?"
     puts encrypt(password)
   elsif choice == "decrypt"
     puts decrypt(password)
-  end # string=user input
-#
+  end
+
