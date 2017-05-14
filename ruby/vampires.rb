@@ -1,22 +1,28 @@
-got_age_right= true
+
 likes_garlic_bread = true
 wants_insurance = true
-name = true
+current_year = 2017
 
 puts "What is your name?"
 name = gets.chomp
   puts "Nice to meet you, #{name}!"
-
-
+if name == "Drake Cula" || "Tu Fang"
+  name = true
+else
+  name = false
+end
 
 puts "How old are you?"
 age = gets.chomp
+age.to_i
 
 puts "What year were you born?"
 birth_year = gets.chomp
+birth_year.to_i
+
+got_age_right = current_year - (age.to_i + birth_year.to_i)
 
 puts "Our cafeteria serves garlic bread. Should we order some for you? y/n"
-
 likes_garlic_bread = gets.chomp
 
 if likes_garlic_bread == "y"
@@ -39,21 +45,16 @@ else
   wants_insurance = false
 end
 
-
-if name == "Drake Cula"
-  puts "Definitely a vampire"
-
-elsif name == "Tu Fang"
-  puts "Definitely a vampire"
-
-elsif likes_garlic_bread && wants_insurance
+if got_age_right == 0 && likes_garlic_bread && wants_insurance && name = false
   puts "Probably not a vampire"
 
-elsif likes_garlic_bread != true || wants_insurance != true
+elsif got_age_right >= 1 && (likes_garlic_bread != true || wants_insurance != true)
   puts "Probably a vampire"
 
-elsif likes_garlic_bread != true && wants_insurance != true
-  puts "Almost certainly a vampire"
-end
+elsif got_age_right >= 1 && likes_garlic_bread != true && wants_insurance != true puts "Almost certainly a vampire"
 
-# check other repl
+elsif name = true
+  puts "Definitely a vampire"
+
+else puts "Results inconclusive"
+end
