@@ -48,10 +48,11 @@ end
 if got_age_right == 0 && likes_garlic_bread && wants_insurance && name = false
   puts "Probably not a vampire"
 
+elsif got_age_right >= 1 && likes_garlic_bread != true && wants_insurance != true
+  puts "Almost certainly a vampire"
+
 elsif got_age_right >= 1 && (likes_garlic_bread != true || wants_insurance != true)
   puts "Probably a vampire"
-
-elsif got_age_right >= 1 && likes_garlic_bread != true && wants_insurance != true puts "Almost certainly a vampire"
 
 elsif name = true
   puts "Definitely a vampire"
