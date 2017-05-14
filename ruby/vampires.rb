@@ -52,6 +52,14 @@ else
   wants_insurance = false
 end
 
+vampireallergy = "sunshine"
+allergies = ""
+puts "any allergies? type done if no"
+allergies = gets.chomp
+until allergies == "done"
+  puts "Please list allergies. Type 'done' when finished."
+end
+
 if got_age_right == 0 && likes_garlic_bread && wants_insurance && name = false
   puts "Probably not a vampire"
 
@@ -69,3 +77,7 @@ end
 
   puts "#{num_of_emp} potential vampires left!"
 end
+
+print "Survey results: Name: #{name}, age: #{age}, year of birth: #{birth_year} wants garlic bread: #{likes_garlic_bread}, wants insurance: #{wants_insurance}, allergies: #{allergies}."
+
+print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
