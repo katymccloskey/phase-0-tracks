@@ -32,3 +32,26 @@ end
 
 puts dinos
 
+
+#use documentation to find other array and hash methods that take blocks
+
+numbers = [ 1, 3, 5, 10, 20 ]
+
+# example array modifiers
+
+#puts numbers.delete_if { |numbers| numbers < 10}
+
+#puts numbers.keep_if { |numbers| numbers < 5}
+
+# example hash modifiers
+
+letternum = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+}
+
+#puts letternum.fetch(:a)
+
+puts letternum.reject { |letter, value| value < 3 }
