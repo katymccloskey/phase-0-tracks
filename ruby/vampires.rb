@@ -49,14 +49,20 @@ else
   wants_insurance = false
 end
 
+allergies = false
+until allergies == "done" || allergies == "sunshine"
 puts "any allergies? type done if no"
 allergies = gets.chomp
-until allergies == "done" || allergies == "sunshine"
-  allergies = gets.chomp
+  if allergies == "sunshine"
+    puts "Hmm."
+  elsif allergies == "done"
+    puts "Ok, great."
+  else
+    puts "I didn't understand you"
+  end
 end
 
-
-if name != true
+if name != true || allergies == "sunshine"
   puts "Definitely a vampire"
 
 elsif got_age_right == 0 && likes_garlic_bread && wants_insurance && name = true
