@@ -9,3 +9,25 @@ def sup_bro
 end
 
 sup_bro { |name| puts "Here is the block with a person called #{name}" }
+
+#begin array and hash block
+
+movie_stars = {
+  "Jim Carey" => "Liar Liar",
+  :brad_Pitt => "Troy",
+  jennifer_Anniston: "Friends",
+}
+
+movie_stars.each { |name, movie| puts "The actor #{name} performed in #{movie}" }
+
+dinos =  ["t-rex", "stegosaurus", "allosaurus"]
+
+puts "First, there were dinos."
+puts dinos
+
+puts "Then, came a meteor."
+dinos.map! do |target|
+  puts target
+  "Extinct"
+end
+
