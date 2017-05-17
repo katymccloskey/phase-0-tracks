@@ -27,7 +27,8 @@ puts dinos
 
 puts "Then, came a meteor."
 dinos.map! do |target|
-  puts target
   "Extinct"
 end
+
+puts dinos
 
