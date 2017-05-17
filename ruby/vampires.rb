@@ -1,8 +1,4 @@
-
-likes_garlic_bread = true
-wants_insurance = true
 current_year = 2017
-name = true
 
 puts "How many employees do you need to process?"
 num_of_emp = gets.chomp
@@ -59,7 +55,11 @@ until allergies == "done" || allergies == "sunshine"
   allergies = gets.chomp
 end
 
-if got_age_right == 0 && likes_garlic_bread && wants_insurance && name = true
+
+if name != true
+  puts "Definitely a vampire"
+
+elsif got_age_right == 0 && likes_garlic_bread && wants_insurance && name = true
   puts "Probably not a vampire"
 
 elsif got_age_right >= 1 && likes_garlic_bread != true && wants_insurance != true
@@ -67,9 +67,6 @@ elsif got_age_right >= 1 && likes_garlic_bread != true && wants_insurance != tru
 
 elsif got_age_right >= 1 && (likes_garlic_bread != true || wants_insurance != true)
   puts "Probably a vampire"
-
-elsif name = true
-  puts "Definitely a vampire"
 
 else puts "Results inconclusive"
 end
