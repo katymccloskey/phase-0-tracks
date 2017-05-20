@@ -37,3 +37,10 @@ classroom = {
       ]
   }
 }
+
+classroom[:desk_1][:student_info][:student_name]
+
+classroom[:desk_2][:supplies][2]
+
+classroom[:desk_3][:student_info][:student_age]
+
