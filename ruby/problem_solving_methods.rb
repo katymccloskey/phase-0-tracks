@@ -1,12 +1,12 @@
-def search_array(array, n)
-  array.each
-    if array.include? n
-      p array.rindex(n)
-    end
+sequence = [0, 1]
+
+def fib(n)
+  fib_array = [0, 1]
+  repeat = n - 2
+  repeat.times do
+    fib_array << fib_array[-1] + fib_array[-2]
+  end
+  p fib_array
 end
 
-array1 = [2, 4, 6, 8]
-
-search_array(array1, 5)
-
-search_array(array1, 3)
+fib(100)
