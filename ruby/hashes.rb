@@ -1,8 +1,15 @@
-design_info = {}
+design_info = {
+  name: "",
+  age: "",
+  num_of_kids: "",
+
+}
 
 #tell designer we will collect information
 puts "Welcome! We'll be inputting your client info."
 #ask for the clients:
+puts "What is your name?"
+  name = gets.chomp
 puts "How old is your client?"
     # name
     # age
