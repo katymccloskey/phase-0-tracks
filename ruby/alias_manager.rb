@@ -2,11 +2,18 @@
 # change vowels to next vowel in list "aeiou"
 #change consonants to next consonant
 
- def alias_method
-  puts "what is your name"
+def alias_method
+  name = ""
+  until name == "quit"
+  puts "what is your name? type quit to exit"
   name = gets.chomp
-  str = name
-  str.split(" ").reverse.join(" ").tr('aeiou', 'eioua').tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
- end
+    if name != "quit"
+      str = name
+      p str.split(" ").reverse.join(" ").tr('aeiou', 'eioua').tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
+    break if name == "quit"
+    end
+  end
+end
 
-p alias_method
+
+alias_method
