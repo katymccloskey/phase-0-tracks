@@ -44,17 +44,7 @@
 # Dash.play_dead
 
 
-song_array = []
-loop_count = 0
 
-until loop_count == 50
-  puts "please type the  name of the song you want to hear"
-  song_title = gets.chomp
-  song_array << song_title
-  loop_count += 1
-end
-
-p song_array
 
 class Songs
 
@@ -81,3 +71,42 @@ end
 # Song1.play_song
 
 # Song1.repeat(5)
+
+song_array = []
+loop_count = 0
+
+until loop_count == 50
+  song = Songs.new
+  song_array << song
+  loop_count += 1
+end
+
+p song_array
+
+song_array.each do |title|
+  song.play_song
+  song.repeat(2)
+end
+
+
+
+
+
+
+
+# song_array = []
+# loop_count = 0
+
+# until loop_count == 5
+#   puts "please type the  name of the song you want to hear"
+#   song_title = gets.chomp
+#   song_array << song_title
+#   loop_count += 1
+# end
+
+# p song_array
+
+# song_array.each do |title|
+#   song_title.play_song
+#   song_title.repeat(2)
+# end
