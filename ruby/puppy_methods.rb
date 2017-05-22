@@ -13,10 +13,15 @@ class Puppy
     end
   end
 
+  def roll_over
+    puts "*rolls over*"
+  end
 end
 
 Dash = Puppy.new
 Dash.fetch("ball")
 
 Dash.speak(5)
+
+Dash.roll_over
 
