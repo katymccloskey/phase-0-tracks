@@ -16,13 +16,21 @@ class Santa
     puts "That was a good #{type}!"
   end
 
-
-
 end
 
-santa1 = Santa.new
+# santa1 = Santa.new
 
-santa1.speak
+# santa1.speak
 
-santa1.eat_milk_and_cookies("snickerdoodle")
+# santa1.eat_milk_and_cookies("snickerdoodle")
+
+santas = []
+genders = ["agender", "female", "male"]
+ethnicities = ["latina", "black", "phillipino"]
+
+genders.length.times do |i|
+  santas << Santa.new(genders[i], ethnicities[i])
+  end
+
+p santas
 
