@@ -1,5 +1,8 @@
 class Santa
 
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
+
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance..."
     @gender = gender
@@ -41,18 +44,18 @@ end
 
 santa1 = Santa.new("female", "latina")
 
-p santa1.get_mad_at("Vixen")
+p santa1.gender=("duno")
 
-#  santa1.speak
+santa1.speak
 
-# # santa1.eat_milk_and_cookies("snickerdoodle")
+santa1.eat_milk_and_cookies("snickerdoodle")
 
-# santas = []
-# genders = ["agender", "female", "male"]
-# ethnicities = ["latina", "black", "phillipino"]
+santas = []
+genders = ["agender", "female", "male"]
+ethnicities = ["latina", "black", "phillipino"]
 
-# genders.length.times do |i|
-#   santas << Santa.new(genders[i], ethnicities[i])
-#   end
+genders.length.times do |i|
+ santas << Santa.new(genders[i], ethnicities[i])
+  end
 
-# p santas
+p santas
