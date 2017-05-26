@@ -12,11 +12,11 @@ def create_list(str)
     list_arr.each do |item|
     list_hash[item] = 0
   end
-  p list_hash
+  list_hash
 end
 
 str = ("zuchinni, eggs, butter")
-grocery_list = create_list(str)
+p grocery_list = create_list(str)
 
 # Method to add an item to a list
 # input: list, item name, and optional quantity
@@ -24,20 +24,28 @@ grocery_list = create_list(str)
 # move item name and quantity of that item to the list
 # output:hash
 
-def add_item(str)
-  list_hash = {}
-  list_arr = str.split(" ")
-  list_arr.each do |item|
-    list_hash[item] = 0
+def add_item(list, item, quant)
+  grocery_list = {}
+  groc_array = item, quant
+  groc_array.each do |item, quant|
+    grocery_list[item] = quant
   end
-  p list_hash
+  grocery_list
 end
+
+grocery_list = {}
+item = "potato"
+quant = "4"
+p grocery_list = add_item(grocery_list, item, quant)
 
 # Method to remove an item from the list
 # input:list, item
 # steps: define the method that takes 2 parameters
 #remove item form the list
 # output:hash
+def delete_item
+  #delete item from the list
+end
 
 
 # Method to update the quantity of an item
