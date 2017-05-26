@@ -28,7 +28,7 @@ def add_item(list, item, quant)
   grocery_list = {}
   groc_array = item, quant
   groc_array.each do |item, quant|
-    grocery_list[item] = quant
+    grocery_list[item] << quant
   end
   grocery_list
 end
