@@ -15,7 +15,7 @@ def create_list(str)
   grocery_list
 end
 
-grocery_list = create_list("zuchinni, eggs, butter")
+
 
 # Method to add an item to a list
 # input: list, item name, and optional quantity
@@ -23,16 +23,46 @@ grocery_list = create_list("zuchinni, eggs, butter")
 # move item name and quantity of that item to the list
 # output:hash
 
-def add_item(item, quant)
-  grocery_list = {}
-  grocery_list[item] = quant
-    grocery_list.each do |item, quant|
-      grocery_list[item] << quant
-    end
-  grocery_list
+
+def add_item(list, item, quant = 0)
+  list[item] = quant
+  list
 end
 
-p grocery_list = add_item("banana", "5")
+def remove_item(list, item)
+  list.delete(item)
+  list
+end
+
+def update_quantity(list, item, quantity)
+  list[item] = quantity
+  print pretty_list(list)
+end
+
+def pretty_list(list)
+  list.each_with_index do |item, index|
+    puts "#{index +1}: #{item}"
+  end
+end
+
+grocery_list = create_list("zuchinni, eggs, butter")
+
+p add_item(grocery_list, "bacon", 4)
+
+update_quantity(grocery_list, "eggs", 12)
+
+p pretty_list(grocery_list)
+#p grocery_list.pretty_list
+
+
+#p add_item(grocery_list, "bacon", 4)
+
+#p remove_item(grocery_list, "eggs")
+#grocery_list = {}
+
+#grocery_list.add_item(new_list, "banana", 4)
+#grocery_list.add_item(grocery_list, "banana", 4)
+
 
 # Method to remove an item from the list
 # input:list, item
@@ -40,9 +70,6 @@ p grocery_list = add_item("banana", "5")
 #remove item form the list
 # output:hash
 
-def remove_item(hash, key)
-
-end
 
 # Method to update the quantity of an item
 # input:list, item
@@ -57,4 +84,3 @@ end
 #setup a loop to run through the whole hash
 #inside the loop print each key/ Value pair in pretty fashion
 # output:strings
-grocery_list = {}
