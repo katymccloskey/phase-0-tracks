@@ -24,13 +24,23 @@ grocery_list = create_list(str)
 # move item name and quantity of that item to the list
 # output:hash
 
-def add_item(str)
-  list_hash = {}
-  list_arr = str.split(" ")
-  list_arr.each do |item|
-    list_hash[item] = 0
-  end
-  p list_hash
+# <<<<<<< Updated upstream
+# def add_item(str)
+#   list_hash = {}
+#   list_arr = str.split(" ")
+#   list_arr.each do |item|
+#     list_hash[item] = 0
+# =======
+def add_item(list, item, quant)
+grocery_list[item]:
+
+  # grocery_list = {}
+  # groc_array = item, quant
+  # groc_array.each do |item, quant|
+#   #   grocery_list[item] << quant
+# >>>>>>> Stashed changes
+#   end
+#   p list_hash
 end
 
 # Method to remove an item from the list
