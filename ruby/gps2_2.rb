@@ -7,12 +7,12 @@
 # output: [what data type goes here, array or hash?]
 
 def create_list(str)
-  list_hash = {}
+  grocery_list = {}
   list_arr = str.split(" ")
     list_arr.each do |item|
-    list_hash[item] = 0
+    grocery_list[item] = 0
   end
-  p list_hash
+  grocery_list
 end
 
 grocery_list = create_list("zuchinni, eggs, butter")
@@ -25,14 +25,14 @@ grocery_list = create_list("zuchinni, eggs, butter")
 
 def add_item(item, quant)
   grocery_list = {}
-  groc_array = item, quant
-  groc_array.each do |item, quant|
-     grocery_list[item] << quant
-  end
-  p list_hash
+  grocery_list[item] = quant
+    grocery_list.each do |item, quant|
+      grocery_list[item] << quant
+    end
+  grocery_list
 end
 
-grocery_list = add_item("banana", "8")
+p grocery_list = add_item("banana", "5")
 
 # Method to remove an item from the list
 # input:list, item
@@ -42,7 +42,7 @@ grocery_list = add_item("banana", "8")
 
 def remove_item(hash, key)
 
-
+end
 
 # Method to update the quantity of an item
 # input:list, item
@@ -57,3 +57,4 @@ def remove_item(hash, key)
 #setup a loop to run through the whole hash
 #inside the loop print each key/ Value pair in pretty fashion
 # output:strings
+grocery_list = {}
