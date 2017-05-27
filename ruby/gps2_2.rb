@@ -15,8 +15,7 @@ def create_list(str)
   p list_hash
 end
 
-str = ("zuchinni, eggs, butter")
-grocery_list = create_list(str)
+grocery_list = create_list("zuchinni, eggs, butter")
 
 # Method to add an item to a list
 # input: list, item name, and optional quantity
@@ -24,30 +23,25 @@ grocery_list = create_list(str)
 # move item name and quantity of that item to the list
 # output:hash
 
-# <<<<<<< Updated upstream
-# def add_item(str)
-#   list_hash = {}
-#   list_arr = str.split(" ")
-#   list_arr.each do |item|
-#     list_hash[item] = 0
-# =======
-def add_item(list, item, quant)
-grocery_list[item]:
-
-  # grocery_list = {}
-  # groc_array = item, quant
-  # groc_array.each do |item, quant|
-#   #   grocery_list[item] << quant
-# >>>>>>> Stashed changes
-#   end
-#   p list_hash
+def add_item(item, quant)
+  grocery_list = {}
+  groc_array = item, quant
+  groc_array.each do |item, quant|
+     grocery_list[item] << quant
+  end
+  p list_hash
 end
+
+grocery_list = add_item("banana", "8")
 
 # Method to remove an item from the list
 # input:list, item
 # steps: define the method that takes 2 parameters
 #remove item form the list
 # output:hash
+
+def remove_item(hash, key)
+
 
 
 # Method to update the quantity of an item
