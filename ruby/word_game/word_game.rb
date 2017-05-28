@@ -4,8 +4,10 @@ class Game
 
   def initialize(word)
   @word = word #use this variable to take in the word from the user
-  @guess_letter #use this variable to take in guessed letter from the user
+  @letter_guessed #use this variable to take in guessed letter from the user
   @hidden_word #use this to store word in dash form
+  @num_of_guesses = @word.length
+  @guessed_already = [] #array to store letters the user has already guessed
   end
 # Method to take a word and return it as “-----“, one dash for each letter in the word
   def word_hider
@@ -16,8 +18,16 @@ class Game
 
   def guess_checker
     # check user input against characters in word
-    # print new dash string with correct letter in correct place, if letter guessed is correct
-    # when number of guesses == number of char in word, end, you lose
+    #store letter_guessed in guessed_already array
+    until # when number of guesses == @word.length, end, you lose
+      if @word.include? @letter_guessed
+      # print new dash string with correct letter in correct place, if letter guessed is correct
+      # @num_of_guesses -= 1
+      elsif #letter guessed is guessed_already, puts "you guessed that already"
+      elsif #word doesn't include letter,
+          # @num_of_guesses -= 1
+      end
+    end
   end
 # Method to print congratulatory message for win, taunting message for loss
   def print_win_or_lose
