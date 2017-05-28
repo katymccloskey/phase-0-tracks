@@ -1,14 +1,20 @@
-
-likes_garlic_bread = true
-wants_insurance = true
-name = true
 current_year = 2017
+
+puts "How many employees do you need to process?"
+num_of_emp = gets.chomp
+num_of_emp = num_of_emp.to_i
+
+until num_of_emp == 0
+  num_of_emp = num_of_emp - 1
 
 puts "What is your name?"
 name = gets.chomp
   puts "Nice to meet you, #{name}!"
-
-
+if name == "Drake Cula" || name == "Tu Fang"
+  name = false
+else
+  name = true
+end
 
 puts "How old are you?"
 age = gets.chomp
@@ -43,19 +49,39 @@ else
   wants_insurance = false
 end
 
+allergies = false
+until allergies == "done" || allergies == "sunshine"
+puts "any allergies? type done if no"
+allergies = gets.chomp
+  if allergies == "sunshine"
+    puts "Hmm."
+  elsif allergies == "done"
+    puts "Ok, great."
+  else
+    puts "I didn't understand you"
+  end
+end
 
-if name == "Drake Cula"
+if name != true || allergies == "sunshine"
   puts "Definitely a vampire"
 
-elsif name == "Tu Fang"
-  puts "Definitely a vampire"
-
-elsif got_age_right == 0 && likes_garlic_bread && wants_insurance
+elsif got_age_right == 0 && likes_garlic_bread && wants_insurance && name = true
   puts "Probably not a vampire"
 
-elsif got_age_right >= 1 || likes_garlic_bread != true || wants_insurance != true
+elsif got_age_right >= 1 && likes_garlic_bread != true && wants_insurance != true
+  puts "Almost certainly a vampire"
+
+elsif got_age_right >= 1 && (likes_garlic_bread != true || wants_insurance != true)
   puts "Probably a vampire"
 
-elsif likes_garlic_bread != true && wants_insurance != true
-  puts "Almost certainly a vampire"
+else puts "Results inconclusive"
 end
+
+  puts "#{num_of_emp} potential vampires left!"
+
+
+print "Survey results: Name: #{name}, age: #{age}, year of birth: #{birth_year} wants garlic bread: #{likes_garlic_bread}, wants insurance: #{wants_insurance}, allergies: #{allergies}."
+
+end
+
+print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
