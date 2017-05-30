@@ -1,9 +1,10 @@
 class Dancer
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :tutu
 
-  def initialize (name, age)
+  def initialize (name, age, tutu)
     @name = name
     @age = age
+    @tutu = tutu
   end
 
   def pirouette

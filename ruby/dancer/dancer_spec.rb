@@ -1,9 +1,9 @@
 require_relative 'dancer'
 
 describe Dancer do
-  let(:dancer) { Dancer.new("Misty Copeland", 33) }
+  let(:dancer) { Dancer.new("Misty Copeland", 33, "pink") }
 
-  it "pirouettes" do
+  it "twirls" do
     expect(dancer.pirouette).to eq "*twirls*"
   end
 
@@ -24,11 +24,16 @@ describe Dancer do
     expect(dancer.age).to eq 34
   end
 
+  it "has writeable tutu color" do
+    dancer.tutu = "black"
+    expect(dancer.tutu).to eq "black"
+  end
+
   it "keeps a readable dance card" do
     expect(dancer.card).to eq []
   end
 
-  it "can queue parters on the dance card" do
+  it "can add parters to the dance card" do
     dancer.queue_dance_with("Mikhail Baryshnikov")
     expect(dancer.card).to eq ["Mikhail Baryshnikov"]
     dancer.queue_dance_with("Anna Pavlova")
