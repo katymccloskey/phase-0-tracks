@@ -1,49 +1,26 @@
 // psuedocode longest phrase function
-// define var array
-// split each item into it's own variable
+// create function
+// create variables to hold longest word
 // run .length on each item of the variable
-// compare length of each item
+// compare length of each item, storing current longest in variable1. when longest is found, store in var2
 // return longest item
 
-var words = ["cat", "moth", "unicorn"]
+function findLongest(array) {
+var longest = 0;
+var longestWord = "";
 
-function findLongWord(array) {
-  // var str = words.join(" ")
-  // console.log(str)
-  var word
-  var longestWord
-  for (var i = 0; i < array.length; i++) {
-    if (array[i].length > word) {
-      word = array[i].length;
-      console.log(longestWord = array[i])
+for(var i=0; i < array.length; i++) {
+    if (array[i].length > longest) {
+        longest = array[i].length;
+        longestWord = array[i]
+      }
     }
-  }
-
+  return longestWord;
 }
+var array = ["cat", "moth", "unicorn"];
+console.log(findLongest(array));
 
-console.log(findLongWord(words))
-// var words = ["cat", "moth", "unicorn"]
-// console.log(words)
-// var str = words.join(" ")
-// console.log(str)
-// //console.log(str.length)
-// var word1 = str.split(" ")[0];
-// var word2 = str.split(" ")[1];
-// var word3 = str.split(" ")[2];
+var array = ["OMG this was challenging", "but I did it!", "finally"];
+console.log(findLongest(array));
 
-// console.log(word1)
-
-// if (word1.length > word2.length) {
-//   console.log(word1)
-// }
-
-// var words = ["cat", "moth", "unicorn"]
-
-// for (var i = 0; i < words.length; i++) {
-// var word1 = words[i][0];
-// var word2 = words[i][1];
-// var word3 = words[i][2];
-// }
-
-// console.log(word3)
 
