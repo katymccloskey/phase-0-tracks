@@ -42,9 +42,18 @@ function anyMatches(hash1, hash2) {
 
 // write a function that takes an integer for length, and returns an array of strings of the given length (so if we ran function with argument of 3, we'd get three random strings/words of letters back). Words should be of varying length from 1-10.
   //function(n) n is integer for length
+  function generator(n){
+    randomWords = [];
     //while loop count is < n,
     // make word of random letters a-z
+    var word = "";
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    while (randomWords.length < n) {
+      word = alphabet.charAt(Math.floor(Math.random() * alphabet.length))
+    }
       // that is random length 1-10
-
-
+        return Math.floor(Math.random() * 10 + 1);
+      // store word to array
+      randomWords << word
+  }
 // add driver code that does the following 10 times: generates array, prints array,feeds array through findLongestWord function, and prints result
