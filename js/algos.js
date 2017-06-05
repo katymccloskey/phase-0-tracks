@@ -48,12 +48,14 @@ function anyMatches(hash1, hash2) {
     // make word of random letters a-z
     var word = "";
     var alphabet = "abcdefghijklmnopqrstuvwxyz";
-    while (randomWords.length < n) {
+    //while (randomWords.length < n) {
       word = alphabet.charAt(Math.floor(Math.random() * alphabet.length))
-    }
+    //}
       // that is random length 1-10
-        return Math.floor(Math.random() * 10 + 1);
+        //return Math.floor(Math.random() * 10 + 1);
       // store word to array
-      randomWords << word
+      randomWords.push(word)
   }
 // add driver code that does the following 10 times: generates array, prints array,feeds array through findLongestWord function, and prints result
+console.log(generator(3))
+console.log(findLongestWord(randomWords))
