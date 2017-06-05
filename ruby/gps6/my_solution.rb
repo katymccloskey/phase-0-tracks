@@ -95,3 +95,19 @@ end
 report
 #=======================================================================
 # Reflection Section
+
+#What are the differences between the two different hash syntaxes shown in the state_data file?
+  # There is a hash within a hash- the STATE_DATA hash, which is a constant, and has states as the keys and hashes as the values. Those value hashs contain keys of population and pop_density, and those values are the corresponding data numbers.
+
+#What does require_relative do? How is it different from require?
+
+  # require_relative allows us to include data from another file in the same directory
+  # require will search the ruby path (where gems are stored). It has a default path that it will search
+
+#What are some ways to iterate through a hash?
+#When refactoring virus_effects, what stood out to you about the variables, if anything?
+  # each do ||
+  # You don't have to pass them in as arguments, as they are availabel all throughout the class, as they are instance variables.
+
+#What concept did you most solidify in this challenge?
+  # ITERATION
