@@ -22,7 +22,7 @@ db.execute(create_table_cmd)
 #db.execute("INSERT INTO books (title, author, rating) VALUES ('The Shining', 'Stephen King', 10)")
 
 
-# Allow the user to make a list of books they want to read. They can add the author, title, and their own rating fro 1-10.
+# Allow the user to make a list of books they want to read. They can add the author, title, and their own rating from 1-10.
 # Print their data in a pretty way.
 
 def add_book(db, title, author, rating)
@@ -36,6 +36,9 @@ end
 # def add_rating(db, rating)
 #   db.execute("INSERT INTO books (rating) VALUES (?)", [rating])
 # end
+
+books_to_add = ''
+until books_to_add == "no"
 
 puts "Welcome to the Book List-o-Maker! You will make a list of books you've read. Let's get started! What is the title of a book you've read?"
 
@@ -52,20 +55,13 @@ rating = gets.chomp
 
 add_book(db, title, author, rating)
 
+puts "Great! More books to add? Type yes or no"
+
+books_to_add = gets.chomp
+
+end
 
 books = db.execute("SELECT * FROM books")
 books.each do |book|
   puts "You gave #{book['title']} written by #{book['author']} a whopping #{book['rating']} stars!"
 end
-# books.each do |book|
-#   puts "You read #{book['title']} by #{book['author']}!"
-# end
-# books = db.execute("SELECT * FROM books")
-
-# explore ORM by retrieving data
-#kittens = db.execute("SELECT * FROM kittens")
-#puts kittens.class #run .class to see what data type you have
-#kittens.each do |kitten|
-  #puts "#{kitten['name']} is #{kitten['age']}"
-#end
-# kittens = db.execute("SELECT * FROM kittens")
