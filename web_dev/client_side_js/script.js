@@ -5,5 +5,10 @@ function addBorder(event) {
   event.target.style.border = "10px dashed green";
 }
 
-var element = document.getElementById("My Favorite Vegetable");
-element.addEventListener("click", addBorder);
+var els = document.getElementsByTagName("h1");
+var el = els[0]
+el.addEventListener("click", addBorder);
+
+
+var photo = document.getElementById("cauliflower");
+photo.style.border = "5px solid blue"
