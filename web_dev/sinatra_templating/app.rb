@@ -25,3 +25,14 @@ post '/students' do
 end
 
 # add static resources
+
+# add create mailing list
+get '/mailing_list/new' do
+  erb :mailing_list
+end
+
+post '/mailing_list' do
+  db.execute("INSERT INTO mailing_list (name, email)
+    VALUES (?,?)", [params['name'], params['email']])
+  redirect '/'
+end
