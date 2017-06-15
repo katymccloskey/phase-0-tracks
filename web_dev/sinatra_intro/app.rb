@@ -50,3 +50,14 @@ end
 get '/contact' do
   "My address is 22425 Road Drive."
 end
+
+# write a route that takes a persons name as a query parameter and says good job, name! or good job!
+
+get '/greatjob/:name' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
